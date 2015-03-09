@@ -1,0 +1,190 @@
+
+.home .content.row {
+    background: none;
+}
+
+.home .cycloneslider-template-standard .cycloneslider-pager {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 12px;
+    text-align: center;
+}
+
+.collogo {
+	background: #d4b6c7;
+	padding: 10px 0;
+}
+
+.collogo img {
+	margin: 0 auto;
+}
+
+.nature .collimg {
+    background: url('../img/natureimg.png') no-repeat;
+    background-size: cover;
+	width: 100%;
+	height: 500px;
+}
+
+.cosmo .collimg {
+    background: url('../img/cosmoimg.png') no-repeat;    
+    background-size: cover;
+    width: 100%;
+	height: 500px;
+}
+
+.radiant .collimg {
+    background: url('../img/radiantimg.png') no-repeat;    
+    background-size: cover;
+    width: 100%;
+	height: 500px;
+}
+
+.collimg {
+	position: relative;
+}
+
+a .collimg .colltag {
+	    /* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 800ms;
+    -webkit-transition-timing-function: ease-in;
+    -webkit-transition-delay: 50ms;
+    /* Standard syntax */
+    transition-property: height;
+    transition-duration: 800ms;
+    transition-timing-function: ease-in;
+    transition-delay: 50ms;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    height: 0px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+a:hover .collimg .colltag {
+    height: 70px;
+}
+
+.cosmo a:hover .collimg .colltag {
+    height: 90px;
+}
+
+.fr a:hover .collimg .colltag, .pt-pt a:hover .collimg .colltag, .de a:hover .collimg .colltag, .es a:hover .collimg .colltag {
+    height: 90px;
+}
+
+.colltag p {
+    padding: 10px 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.home .hcoll {
+    display: block;
+    overflow: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.htype {
+    display: block;
+    overflow: auto;
+    margin-bottom: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.htype > .col-sm-5th-1 a > div {
+    display: block;
+    position: relative;
+}
+
+.htype a .typename {
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-in;
+    -webkit-transition-delay: 50ms;
+    /* Standard syntax */
+    transition-property: height;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    transition-delay: 50ms;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    bottom: 0;
+    height: 35px;
+    width: 100%;
+    text-align: center;
+    color: #eee;
+    background-color: #720d4f;
+    font-size: 18px;
+}
+
+.htype a:hover .typename {
+    height: 0px;
+}
+
+.typename p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+
+.home .latest {
+    display: block;
+    overflow: auto;
+    // margin-bottom: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.home .main .latest .block {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px 0px;
+}
+
+.latest .news.block h3 {
+    margin-left: 25px;
+}
+
+.home .rts header {
+    text-align: center;
+}
+
+.fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-close, .fotorama__video-play {
+    background-image: url('../img/fotorama.png') !important;
+    background-repeat: no-repeat !important;
+}
+
+.fotorama_custom article .entry-image {
+    float: left;
+    display: block;
+    width: 40%;
+    margin-right: 20px;
+}
+
+.fotorama_custom article .entry-title {
+    font-size: 32px;
+}
+
+.fotorama_custom article .entry-summary {
+    font-size: 18px;
+}
+
+.fotorama_custom article {
+    margin: 0 25px;
+}
+
+.destaque-nav {
+    display: none;
+}

@@ -1,4 +1,7 @@
 <?php
+
+add_theme_support( 'woocommerce' );
+
 /**
  * Roots includes
  *

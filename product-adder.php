@@ -1,0 +1,1 @@
+<?php content_product_adder(); ?>

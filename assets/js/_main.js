@@ -23,18 +23,128 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+      $('.navbar .dropdown').hover(function() {
+      $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+
+      }, function() {
+      $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+      });
+
+      $('.navbar .dropdown > a').click(function(){
+      location.href = this.href;
+      });
+
+      $('.nav.nav-justified').scrollToFixed({ zIndex: 1027 });
+
     }
   },
   // Home page
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+
+      // News Slider fotorama initialization
+
+      $(function () {
+        // 1. Initialize fotorama manually.
+        var $fotoramaDiv = $('.fotorama_custom').fotorama({
+          loop: true,
+          autoplay: 6000,
+          allowfullscreen: false,
+          nav: 'dots',
+          width: "100%",
+          maxheight: "300",
+          height: "100%",
+          arrows: true,
+          click: false,
+          swipe:false,
+          margin: "0"
+        });
+
+        // 2. Get the API object.
+        var fotorama = $fotoramaDiv.data('fotorama');
+
+        // 3. Inspect it in console.
+      //  console.log(fotorama);
+
+        jQuery('.destaque-prev').click(function () {
+            fotorama.show('<');
+        });
+        jQuery('.destaque-next').click(function () {
+            fotorama.show('>');
+        });
+
+      });
+
+/*
+      // JS equal height columns
+
+      equalheight = function(container){
+
+      var currentTallest = 0,
+           currentRowStart = 0,
+           rowDivs = [],
+           $el,
+           topPosition = 0;
+       $(container).each(function() {
+
+         $el = $(this);
+         $($el).height('auto');
+         topPostion = $el.position().top;
+
+         if (currentRowStart !== topPostion) {
+           for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+             rowDivs[currentDiv].height(currentTallest);
+           }
+           rowDivs.length = 0; // empty the array
+           currentRowStart = topPostion;
+           currentTallest = $el.height();
+           rowDivs.push($el);
+         } else {
+           rowDivs.push($el);
+           currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+        }
+         for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+           rowDivs[currentDiv].height(currentTallest);
+         }
+       });
+      };
+
+      $(window).load(function() {
+        equalheight('.latest .block');
+      });
+
+
+      $(window).resize(function(){
+        equalheight('.latest .block');
+      });
+*/
     }
   },
   // About us page, note the change from about-us to about_us.
   about_us: {
     init: function() {
       // JavaScript to be fired on the about us page
+    }
+  },
+
+  archive: {
+    init: function() {
+      // JavaScript to be fired on archive pages
+
+//      $('.en .dz_breadcrumb').scrollToFixed({ marginTop: 65 });
+      $('.dz_breadcrumb').scrollToFixed({ marginTop: $('.navbar').outerHeight() + 0, });
+
+      $('.widget_product_search').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.dz_breadcrumb').outerHeight() + 20, });
+      $('.widget_layered_nav').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.dz_breadcrumb').outerHeight() + $('.widget_product_search').outerHeight() + 20, });
+      $('.widget_product_categories').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.dz_breadcrumb').outerHeight() + $('.widget_product_search').outerHeight() + $('.widget_layered_nav').outerHeight() + 30, });
+
+      $('.widget_search').scrollToFixed({ marginTop: $('.navbar').outerHeight() + 0, });
+      $('.widget_recent_entries').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.widget_search').outerHeight() + 20, });
+      $('.widget_archive').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.widget_search').outerHeight() + $('.widget_recent_entries').outerHeight() + 25, });
+    
+      $('footer').scrollToFixed( { bottom: 0, limit: $('.footwrap').offset().top } );
     }
   }
 };

@@ -24,7 +24,12 @@ function roots_scripts() {
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
-      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
+      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js',
+      'jquerymigrate' => '//code.jquery.com/jquery-migrate-1.2.1.min.js',
+      'fotoramacss'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css',
+      'fotoramajs'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.js',
+      'bs5col' => '/assets/vendor/bootstrap-5-columns/dist/bootstrap-5-columns.css',
+      'scrolltofixed' => '/assets/js/plugins/jquery-scrolltofixed-min.js'
     );
   } else {
     $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
@@ -33,11 +38,18 @@ function roots_scripts() {
       'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
       'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
-      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
+      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+      'jquerymigrate' => '//code.jquery.com/jquery-migrate-1.2.1.min.js',
+      'fotoramacss'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css',
+      'fotoramajs'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.js',
+      'bs5col' => '/assets/vendor/bootstrap-5-columns/dist/bootstrap-5-columns.min.css',
+      'scrolltofixed' => '/assets/js/plugins/jquery-scrolltofixed-min.js'
     );
   }
 
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
+  wp_enqueue_style('fotoramacss', $assets['fotoramacss'], false, null);
+  wp_enqueue_style('bs5col', get_template_directory_uri() . $assets['bs5col'], false, null);
 
   /**
    * jQuery is loaded using the same method from HTML5 Boilerplate:
@@ -54,8 +66,14 @@ function roots_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
+  wp_register_script('fotorama', $assets['fotoramajs'], array(), null, true);
+  wp_register_script('jquery-migrate', $assets['jquerymigrate'], array(), null, true);
+
   wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, true);
   wp_enqueue_script('jquery');
+  wp_enqueue_script('jquery-migrate');
+  wp_enqueue_script('fotorama');
+  wp_enqueue_script('scrolltofixed', get_template_directory_uri() . $assets['scrolltofixed'], array(), null, true);
   wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);

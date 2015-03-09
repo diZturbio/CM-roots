@@ -1,0 +1,63 @@
+.vertalign() { // TO BE USED AS MIXIN
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main {
+	position: relative;
+}
+
+.abtcont {
+	margin-top: -5px;
+}
+
+.abtcont .row {
+	// display: block;
+	height: auto;
+	min-height: 200px;
+	overflow: auto;
+	display: flex;
+	align-items: center;
+}
+
+.abtcont .col-sm-6 {
+	flex-grow: 1;
+}
+
+.abtcont .abtbox {
+	// -webkit-transform-style: preserve-3d;
+	// -moz-transform-style: preserve-3d;
+	// transform-style: preserve-3d;
+}
+
+.abtimg {
+	padding: 0;
+}
+
+.abtcont h3 {
+	text-align: center;
+}
+
+.abtcont .wraptext {
+	// .vertalign();
+	text-align: center;
+}
+
+.abtcont .wraptext p {
+	margin: 0 auto;
+	width: 75%;
+	font-size: 1.2em;
+	text-align: justify;
+}
+
+.abtvideo {
+	display: block;
+	overflow: auto;
+	width: 100%;
+	// min-height: 200px;
+	height: auto;
+	padding: 0;
+}
