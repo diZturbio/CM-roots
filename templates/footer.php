@@ -22,7 +22,43 @@
 		</div>
 
 		<div class="footextra">
-		    <?php dynamic_sidebar('sidebar-footer'); ?>
+			<div class="col-sm-6">
+			    <?php dynamic_sidebar('sidebar-footer'); ?>
+			</div>
+
+
+			<div class="col-sm-3  col-sm-offset-2">
+				    <div class="subscribe">
+				      <div class="">
+				        <h4 class="" id="subModalLabel"><?php _e('Subscribe to our newsletter', 'roots') ?></h4>
+				      </div>
+				      <div class="">
+				      <?php
+				        if(ICL_LANGUAGE_CODE == 'pt-pt') {
+				          echo do_shortcode('[contact-form-7 id="4228" title="Subscribe Newsletter PT"]');
+				        }
+				        elseif (ICL_LANGUAGE_CODE == 'de') {
+				          echo do_shortcode('[contact-form-7 id="4226" title="Subscribe Newsletter DE"]'); 
+				        }
+				        elseif (ICL_LANGUAGE_CODE == 'fr') {
+				          echo do_shortcode('[contact-form-7 id="4227" title="Subscribe Newsletter FR"]');  
+				        }
+				        elseif (ICL_LANGUAGE_CODE == 'es') {
+				          echo do_shortcode('[contact-form-7 id="4225" title="Subscribe Newsletter ES"]');  
+				        }
+				        else {
+				          echo do_shortcode('[contact-form-7 id="2478" title="Subscribe Newsletter EN"]');
+				        }
+				      ?>
+				      </div>
+				<!--       <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        <button type="button" class="btn btn-primary">Save changes</button>
+				      </div> -->
+				    </div>
+
+			</div>
+
 		</div>
 		
 	</div>
