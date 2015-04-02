@@ -24,9 +24,9 @@
 		else { ?>
 	  		<a href="collection/naturemary">
 		<?php } ?>
-  			<div class="collogo">
+<!--			<div class="collogo">
   				<img class="img-responsive" src ="<?php echo get_template_directory_uri(); ?>/assets/img/naturemary.png" alt="NatureMary">
-  			</div>
+  			</div> -->
 	  		<div class="collimg">
 	  			<div class="colltag">
 	  				<p><?php _e('A collection that celebrates flora and fauna with passionate lamps that are nature inspired.', 'roots'); ?></p>
@@ -52,9 +52,9 @@
 		else { ?>
 	  		<a href="collection/cosmomary">
 		<?php } ?>
-	  		<div class="collogo">
+<!-- 	  		<div class="collogo">
 	  			<img class="img-responsive" src ="<?php echo get_template_directory_uri(); ?>/assets/img/cosmomary.png" alt="CosmoMary">
-	  		</div>
+	  		</div> -->
 	  		<div class="collimg">
 	  			<div class="colltag">
 	  				<p><?php _e('A collection of lamps filled with memories and unique sensations brought from cities around the world.', 'roots'); ?></p>
@@ -80,9 +80,9 @@
 		else { ?>
 	  		<a href="collection/radiantmary">
 		<?php } ?>
-	  		<div class="collogo">
+<!-- 			<div class="collogo">
 	  			<img class="img-responsive" src ="<?php echo get_template_directory_uri(); ?>/assets/img/radiantmary.png" alt="RadiantMary">
-	  		</div>
+	  		</div> -->
 	  		<div class="collimg">
 	  			<div class="colltag">
 	  				<p><?php _e('A collection of classic yet exotic lighting pieces inspired in the dreamy history of Burlesque.', 'roots'); ?></p>

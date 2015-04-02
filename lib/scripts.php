@@ -26,8 +26,8 @@ function roots_scripts() {
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js',
       'jquerymigrate' => '//code.jquery.com/jquery-migrate-1.2.1.min.js',
-      'fotoramacss'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css',
-      'fotoramajs'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.js',
+      'fotoramacss'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css',
+      'fotoramajs'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js',
       'bs5col' => '/assets/vendor/bootstrap-5-columns/dist/bootstrap-5-columns.css',
       'scrolltofixed' => '/assets/js/plugins/jquery-scrolltofixed-min.js'
     );
@@ -40,8 +40,8 @@ function roots_scripts() {
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
       'jquerymigrate' => '//code.jquery.com/jquery-migrate-1.2.1.min.js',
-      'fotoramacss'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css',
-      'fotoramajs'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.js',
+      'fotoramacss'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css',
+      'fotoramajs'  => '//cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.js',
       'bs5col' => '/assets/vendor/bootstrap-5-columns/dist/bootstrap-5-columns.min.css',
       'scrolltofixed' => '/assets/js/plugins/jquery-scrolltofixed-min.js'
     );

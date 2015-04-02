@@ -67,6 +67,9 @@
 	border-radius: 4px 4px 0px 0px;
 	font-size: 15px;	
 	font-weight: 600;
+
+	background-color: #443d3f;
+	border-color: #443d3f;
 }
 
 .pt-pt .btn.requestinfo {
@@ -92,6 +95,21 @@
 	margin: 0;
 	top: 15%;
 	right:0;
+}
+
+#infoModal textarea.form-control {
+	
+	max-height: 180px;
+	height: auto;
+
+	@media (min-width: @screen-md-min) {
+		max-height: 225px;
+		height: auto;
+	}
+	@media (min-width: @screen-lg-min) {
+		max-height: 250px;
+		height: auto;
+	}
 }
 
 .modal-content {
@@ -366,4 +384,12 @@
 
 .woocommerce .widget_layered_nav ul small.count, .woocommerce-page .widget_layered_nav ul small.count {
 	display: none;
+}
+
+#wp-live-chat-image {
+	display: none;
+}
+
+#wp-live-chat-header {
+	padding: 0px 0 0;
 }

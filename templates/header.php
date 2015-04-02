@@ -1,13 +1,12 @@
 <header class="banner"  role="banner">
 
   <div class="container">
+
     <div class="esocial">
       <?php if ( function_exists('cn_social_icon') ) echo cn_social_icon(); ?>
     </div>
-    <div class="certlogos">
-      <img class="celogo" src="<?php echo get_template_directory_uri(); ?>/assets/img/celogo.png" alt="CE certified">
-      <img class="ullogo" src="<?php echo get_template_directory_uri(); ?>/assets/img/ullogo.png" alt="UL certified">
-    </div>
+
+
     <div class="langsel">
       <?php do_action('icl_language_selector'); ?>
     </div>
@@ -15,7 +14,7 @@
 
   <div class="logo">
     <a class="" href="<?php echo esc_url(home_url('/')); ?>">
-      <img class="cmlogo" src="<?php echo get_template_directory_uri(); ?>/assets/img/cmlogoph.png" alt="<?php bloginfo('name'); ?>">
+      <img class="cmlogo img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/cmlogoph.png" alt="<?php bloginfo('name'); ?>">
     </a>
   </div>
   <div class="container menu">
