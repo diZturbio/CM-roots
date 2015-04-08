@@ -35,7 +35,7 @@ var Roots = {
       location.href = this.href;
       });
 
-      $('.nav.nav-justified').scrollToFixed({ zIndex: 1027 });
+      $('.nav.nav-justified').scrollToFixed({ zIndex: 1027, minWidth: 768 });
 
 
       $(function () {
@@ -59,7 +59,8 @@ var Roots = {
           allowfullscreen: false,
           nav: 'dots',
           width: "100%",
-          maxheight: "300",
+          minheight: "300",
+          maxheight: "600",
           height: "100%",
           arrows: true,
           click: false,
@@ -128,9 +129,179 @@ var Roots = {
     }
   },
   // About us page, note the change from about-us to about_us.
-  about_us: {
+  about: {
     init: function() {
       // JavaScript to be fired on the about us page
+      $(function() {
+          
+          var $allVideos = $("iframe[src^='http://player.vimeo.com'], iframe[src^='http://www.youtube.com'], object, embed"),
+          $fluidEl = $(".abtvideo");
+              
+        $allVideos.each(function() {
+        
+          $(this)
+            // jQuery .data does not work on object/embed elements
+            .attr('data-aspectRatio', this.height / this.width)
+            .removeAttr('height')
+            .removeAttr('width');
+        
+        });
+        
+        $(window).resize(function() {
+        
+          var newWidth = $fluidEl.width();
+          $allVideos.each(function() {
+          
+            var $el = $(this);
+            $el
+                .width(newWidth)
+                .height(newWidth * $el.attr('data-aspectRatio'));
+          
+          });
+        
+        }).resize();
+
+      });
+    }
+  },
+  sobre: {
+    init: function() {
+      // JavaScript to be fired on the about us page
+      $(function() {
+          
+          var $allVideos = $("iframe[src^='http://player.vimeo.com'], iframe[src^='http://www.youtube.com'], object, embed"),
+          $fluidEl = $(".abtvideo");
+              
+        $allVideos.each(function() {
+        
+          $(this)
+            // jQuery .data does not work on object/embed elements
+            .attr('data-aspectRatio', this.height / this.width)
+            .removeAttr('height')
+            .removeAttr('width');
+        
+        });
+        
+        $(window).resize(function() {
+        
+          var newWidth = $fluidEl.width();
+          $allVideos.each(function() {
+          
+            var $el = $(this);
+            $el
+                .width(newWidth)
+                .height(newWidth * $el.attr('data-aspectRatio'));
+          
+          });
+        
+        }).resize();
+
+      });
+    }
+  },
+  a_propos: {
+    init: function() {
+      // JavaScript to be fired on the about us page
+      $(function() {
+          
+          var $allVideos = $("iframe[src^='http://player.vimeo.com'], iframe[src^='http://www.youtube.com'], object, embed"),
+          $fluidEl = $(".abtvideo");
+              
+        $allVideos.each(function() {
+        
+          $(this)
+            // jQuery .data does not work on object/embed elements
+            .attr('data-aspectRatio', this.height / this.width)
+            .removeAttr('height')
+            .removeAttr('width');
+        
+        });
+        
+        $(window).resize(function() {
+        
+          var newWidth = $fluidEl.width();
+          $allVideos.each(function() {
+          
+            var $el = $(this);
+            $el
+                .width(newWidth)
+                .height(newWidth * $el.attr('data-aspectRatio'));
+          
+          });
+        
+        }).resize();
+
+      });
+    }
+  },
+  uber: {
+    init: function() {
+      // JavaScript to be fired on the about us page
+      $(function() {
+          
+          var $allVideos = $("iframe[src^='http://player.vimeo.com'], iframe[src^='http://www.youtube.com'], object, embed"),
+          $fluidEl = $(".abtvideo");
+              
+        $allVideos.each(function() {
+        
+          $(this)
+            // jQuery .data does not work on object/embed elements
+            .attr('data-aspectRatio', this.height / this.width)
+            .removeAttr('height')
+            .removeAttr('width');
+        
+        });
+        
+        $(window).resize(function() {
+        
+          var newWidth = $fluidEl.width();
+          $allVideos.each(function() {
+          
+            var $el = $(this);
+            $el
+                .width(newWidth)
+                .height(newWidth * $el.attr('data-aspectRatio'));
+          
+          });
+        
+        }).resize();
+
+      });
+    }
+  },
+  acerca: {
+    init: function() {
+      // JavaScript to be fired on the about us page
+      $(function() {
+          
+          var $allVideos = $("iframe[src^='http://player.vimeo.com'], iframe[src^='http://www.youtube.com'], object, embed"),
+          $fluidEl = $(".abtvideo");
+              
+        $allVideos.each(function() {
+        
+          $(this)
+            // jQuery .data does not work on object/embed elements
+            .attr('data-aspectRatio', this.height / this.width)
+            .removeAttr('height')
+            .removeAttr('width');
+        
+        });
+        
+        $(window).resize(function() {
+        
+          var newWidth = $fluidEl.width();
+          $allVideos.each(function() {
+          
+            var $el = $(this);
+            $el
+                .width(newWidth)
+                .height(newWidth * $el.attr('data-aspectRatio'));
+          
+          });
+        
+        }).resize();
+
+      });
     }
   },
 
@@ -141,13 +312,13 @@ var Roots = {
 //      $('.en .dz_breadcrumb').scrollToFixed({ marginTop: 65 });
 //      $('.dz_breadcrumb').scrollToFixed({ marginTop: $('.navbar').outerHeight() + 0, });
 
-      $('.widget_product_search').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.dz_breadcrumb').outerHeight() + 20, });
-      $('.widget_layered_nav').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.dz_breadcrumb').outerHeight() + $('.widget_product_search').outerHeight() + 20, });
-      $('.widget_product_categories').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.dz_breadcrumb').outerHeight() + $('.widget_product_search').outerHeight() + $('.widget_layered_nav').outerHeight() + 30, });
+      $('.widget_product_search').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.dz_breadcrumb').outerHeight() + 20, minWidth: 768 });
+      $('.widget_layered_nav').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.dz_breadcrumb').outerHeight() + $('.widget_product_search').outerHeight() + 20, minWidth: 768 });
+      $('.widget_product_categories').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.dz_breadcrumb').outerHeight() + $('.widget_product_search').outerHeight() + $('.widget_layered_nav').outerHeight() + 30, minWidth: 768 });
 
-      $('.widget_search').scrollToFixed({ marginTop: $('.navbar').outerHeight() + 0, });
-      $('.widget_recent_entries').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.widget_search').outerHeight() + 20, });
-      $('.widget_archive').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.widget_search').outerHeight() + $('.widget_recent_entries').outerHeight() + 25, });
+      $('.widget_search').scrollToFixed({ marginTop: $('.navbar').outerHeight() + 0, minWidth: 768 });
+      $('.widget_recent_entries').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.widget_search').outerHeight() + 20, minWidth: 768 });
+      $('.widget_archive').scrollToFixed({ marginTop: $('.navbar').outerHeight() + $('.widget_search').outerHeight() + $('.widget_recent_entries').outerHeight() + 25, minWidth: 768 });
     
       // $('footer').scrollToFixed( { bottom: 0, limit: $('.footwrap').offset().top } );
     }

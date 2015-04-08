@@ -19,6 +19,10 @@
     width: auto;
 	max-width: 413px;
 	margin: -10px auto 15px;
+    padding: 0 10px;
+    @media (min-width: @screen-sm-min) {
+        padding: 0;
+    }
 }
 
 .logo .cmlogo {
@@ -47,6 +51,11 @@
 	border-radius: 0;
 }
 
+.navbar-toggle {
+   background-color: #720d4f;
+   border-color: #443d3f; 
+}
+
 .navbar .navbar-collapse {
     padding: 0;
     z-index: 99;
@@ -55,6 +64,26 @@
 .navbar-collapse:before {
 }
 
+.navbar-toggle {
+    display: block;
+    float:none;
+    margin: 8px auto;
+    @media (min-width: @screen-sm-min) {
+        display: none;
+    }
+
+}
+
+.navbar-toggle span.navmenu {
+    color: white;
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #999;
+}
 
 header .menu nav ul {
     background: url('../img/crossword.png') repeat;

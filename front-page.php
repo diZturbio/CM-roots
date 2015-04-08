@@ -94,7 +94,7 @@
   </div>
 
   <div class="htype">
-  	<div class="col-sm-5th-1">
+  	<div class="col-xs-6 col-sm-5th-1">
 		<?php
 		if(ICL_LANGUAGE_CODE == 'pt-pt') { ?>
 			<a href="product/ltype/suspensao/">			
@@ -120,7 +120,7 @@
 		</a>
 	</div>
 
-  	<div class="col-sm-5th-1">
+  	<div class="col-xs-6 col-sm-5th-1">
 		<?php
 		if(ICL_LANGUAGE_CODE == 'pt-pt') { ?>
 			<a href="product/ltype/candeeiro-de-pe/">			
@@ -145,7 +145,7 @@
 			</div>
 		</a>
 	</div>
-  	<div class="col-sm-5th-1">
+  	<div class="col-xs-6 col-sm-5th-1">
 		<?php
 		if(ICL_LANGUAGE_CODE == 'pt-pt') { ?>
 			<a href="product/ltype/candeeiro-de-mesa/">			
@@ -170,7 +170,7 @@
 			</div>
 		</a>
 	</div>
-  	<div class="col-sm-5th-1">
+  	<div class="col-xs-6 col-sm-5th-1">
 		<?php
 		if(ICL_LANGUAGE_CODE == 'pt-pt') { ?>
 			<a href="product/ltype/candeeiro-de-parede/">			
@@ -195,7 +195,7 @@
 			</div>
 		</a>
 	</div>
-  	<div class="col-sm-5th-1">
+  	<div class="col-xs-6 col-sm-5th-1">
 		<?php
 		if(ICL_LANGUAGE_CODE == 'pt-pt') { ?>
 			<a href="product/ltype/candelabro/">			

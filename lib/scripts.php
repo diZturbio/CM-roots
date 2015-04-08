@@ -48,6 +48,7 @@ function roots_scripts() {
   }
 
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
+
   wp_enqueue_style('fotoramacss', $assets['fotoramacss'], false, null);
   wp_enqueue_style('bs5col', get_template_directory_uri() . $assets['bs5col'], false, null);
 
@@ -66,8 +67,8 @@ function roots_scripts() {
     wp_enqueue_script('comment-reply');
   }
 
-  wp_register_script('fotorama', $assets['fotoramajs'], array(), null, true);
   wp_register_script('jquery-migrate', $assets['jquerymigrate'], array(), null, true);
+  wp_register_script('fotorama', $assets['fotoramajs'], array(), null, true);
 
   wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, true);
   wp_enqueue_script('jquery');

@@ -2,22 +2,22 @@
 	<div class="container">
 		<div class="footwrap">
 
-			<div class="certlogos">
+			<div class="col-sm-8 col-sm-push-2 ftlogowrap">
+			    <img class="img-responsive footlogo" src="<?php echo get_template_directory_uri(); ?>/assets/img/footlogo.png" alt="<?php bloginfo('name'); ?>">
+			</div>
+
+			<div class="col-sm-2 col-sm-pull-8 certlogos">
 			  <img class="celogo" src="<?php echo get_template_directory_uri(); ?>/assets/img/celogo.png" alt="CE certified">
 			  <img class="ullogo" src="<?php echo get_template_directory_uri(); ?>/assets/img/ullogo.png" alt="UL certified">
 			</div>
 
-			<div class="pplogos">
+			<div class="col-sm-2 pplogos">
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="paypal">
 					<input type="hidden" name="cmd" value="_s-xclick">
 					<input type="hidden" name="hosted_button_id" value="CHJ5FCB5YJMT2">
 					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 					<img alt="" border="0" src="https://www.paypalobjects.com/pt_PT/i/scr/pixel.gif" width="1" height="1">
 				</form>
-			</div>
-
-			<div class="footlogo">
-			    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/footlogo.png" alt="<?php bloginfo('name'); ?>">
 			</div>
 
 		</div>
@@ -65,10 +65,10 @@
 
 <?php if (!is_product()) : ?>
 	<!-- Button trigger modal -->
-	<button type="button" id="toggleinfo" class="btn btn-primary requestinfo" data-toggle="modal" data-target="#infoModal" data-backdrop="false"><?php _e('Request info', 'roots') ?></button>
+	<button type="button" id="toggleinfo" class="btn btn-primary requestinfo hidden-xs" data-toggle="modal" data-target="#infoModal" data-backdrop="false"><?php _e('Request info', 'roots') ?></button>
 
 	<!-- Modal -->
-	<div class="modal fade right" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+	<div class="modal fade right hidden-xs" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">

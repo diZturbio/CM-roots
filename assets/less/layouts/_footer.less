@@ -12,41 +12,52 @@
 }
 
 .certlogos {
+    // float: left;
+    padding: 0px;
+    padding-left: 100px;
     float: left;
-    padding: 15px;
+    @media (min-width: @screen-sm-min) {
+        padding: 15px;
+        // float: left;
+    }
 }
 
 .certlogos img {
-    height: 28px;
-    padding-right: 5px;
+    height: 20px;
+    margin-top: 15px;
+    // padding-right: 5px;
+        @media (min-width: @screen-sm-min) {
+	    height: 28px;
+	    margin-top: 0px;
+        // float: left;
+    }
 }
 
-.copyr {
-	color: #720d4f;
-	padding: 5px 0 0;
-	font-size: 13px;
-	// margin-left: 15px;
-	// width: auto;
-	text-align: center;
-}
-.pplogos {
-	display: block;
-	// overflow: auto;
+ .pplogos {
+// 	display: block;
+// 	// overflow: auto;
+// 	margin-right: 10px;
 	float: right;
-	margin-right: 10px;
-	padding-top: 6px;
+	padding-top: 0px;
+ 	padding-left: 30px;
+    @media (min-width: @screen-sm-min) {
+    	float: left;
+	 	padding-top: 6px;
+        padding-left: 0;
+    }
 }
 
-.pplogos img {
-	// max-width: 100%;
-	// height: auto;
+.pplogos form {
+
+}
+
+.ftlogowrap {
+	margin: 8px 10px;
+	text-align: center;
 }
 
 .footlogo {
-	margin: 8px auto;
-	width: 430px;
-
-//	float: none;
+	margin: 0 auto;
 }
 
 .subscribe {
@@ -99,7 +110,7 @@
 
 .footextra {
 	position: relative;
-	z-index: 1000;
+	z-index: 99;
 	background: rgba(255, 255, 255, 0.4);
 	overflow: auto;
 	vertical-align: top;
@@ -124,9 +135,12 @@
 	overflow: auto;
 	padding: 0 10px;
 	vertical-align: top;
-	font-size: 1.2em;
+	font-size: 1.0em;
 	font-weight: bold;
 	white-space: normal;
+    @media (min-width: @screen-sm-min) {
+    	font-size: 1.2em;
+    }	
 }
 
 .widget_nav_menu > ul li a,
@@ -144,4 +158,77 @@
 	padding: 0;
 	display: block;
 	font-weight: normal;
+}
+
+.btn.requestinfo {
+	position: fixed;
+	top: 50%;
+	right: -36px;
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    display: block;
+	border-radius: 4px 4px 0px 0px;
+	font-size: 15px;	
+	font-weight: 600;
+	z-index: 999;
+	background-color: #443d3f;
+	border-color: #443d3f;
+}
+
+.pt-pt .btn.requestinfo {
+	right: -60px;
+}
+
+.de .btn.requestinfo {
+	right: -41px;
+}
+
+.es .btn.requestinfo {
+	right: -61px;
+}
+
+.fr .btn.requestinfo {
+	right: -76px;
+}
+
+#infoModal .modal-dialog {
+	position: fixed;
+	display: block;
+	width: 335px;
+	margin: 0;
+	top: 5%;
+	right:0;
+	@media (min-width: @screen-sm-min) {
+		top: 15%;
+	}
+}
+
+#infoModal textarea.form-control {
+	
+	max-height: 180px;
+	height: auto;
+
+	@media (min-width: @screen-md-min) {
+		max-height: 225px;
+		height: auto;
+	}
+	@media (min-width: @screen-lg-min) {
+		max-height: 250px;
+		height: auto;
+	}
+}
+
+.copyr {
+	color: #720d4f;
+	padding: 5px 0 0;
+	font-size: 13px;
+	// margin-left: 15px;
+	// width: auto;
+	text-align: center;
+	padding-bottom: 40px;
+	@media (min-width: @screen-sm-min) {
+		padding-bottom: 0px;
+		top: 15%;
+	}
 }

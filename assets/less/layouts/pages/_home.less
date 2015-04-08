@@ -13,6 +13,27 @@
     text-align: center;
 }
 
+.home .hcoll {
+    display: block;
+    overflow: auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.hcoll .col-sm-4 {
+    margin-bottom: 20px;
+    
+    @media (min-width: @screen-sm-min) {
+        margin-bottom: 0px;
+    }
+}
+
+.hcoll .col-sm-4:last-child {
+    margin-bottom: 0px;
+}
+
 .collogo {
 	background: #d4b6c7;
 	padding: 10px 0;
@@ -85,21 +106,25 @@ a:hover .collimg .colltag {
     text-align: justify;
 }
 
-.home .hcoll {
-    display: block;
-    overflow: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: -5px;
-    margin-right: -5px;
-}
-
 .htype {
     display: block;
     overflow: auto;
     margin-bottom: 20px;
     margin-left: -5px;
     margin-right: -5px;
+}
+
+.htype > .col-sm-5th-1 {
+    margin-bottom: 10px;
+
+    @media (min-width: @screen-sm-min) {
+        margin-bottom: 0px;
+    }
+
+}
+
+.htype > .col-sm-5th-1:last-child {
+    margin-bottom: 0px;
 }
 
 .htype > .col-sm-5th-1 a > div {
@@ -167,10 +192,10 @@ a:hover .collimg .colltag {
 }
 
 .fotorama_custom article .entry-image {
-    float: left;
-    display: block;
-    width: 40%;
-    margin-right: 20px;
+    // float: left;
+    // display: block;
+    // width: 40%;
+    // margin-right: 20px;
 }
 
 .fotorama_custom article .entry-title {
