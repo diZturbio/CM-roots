@@ -193,13 +193,24 @@ a:hover .collimg .colltag {
 
 .fotorama_custom article .entry-image {
     // float: left;
-    // display: block;
+    display: block;
     // width: 40%;
     // margin-right: 20px;
+    // margin-left: 10px;
+}
+
+.fotorama_custom .entry-text {
+    float: left;
+    // width: 50%;
+
 }
 
 .fotorama_custom article .entry-title {
     font-size: 32px;
+    // width: 50%;
+    @media (min-width: @screen-sm-min) {
+        margin-bottom: 0px;
+    }
 }
 
 .fotorama_custom article .entry-summary {
